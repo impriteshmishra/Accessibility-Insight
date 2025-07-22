@@ -1,9 +1,17 @@
 import { extractEssentialData } from "../dao/extractEssentialData.js";
 import { scanPage } from "../services/scan.service.js";
 
+//correct url configuration
+function normalizeUrl(inputUrl) {
+    if (/^https?:\/\//i.test(inputUrl)) {
+        return inputUrl;
+    }
+    return `https://${inputUrl}`;
+}
+
 
 const scanUrl = async (req, res) => {
-    const { url } = req.body;
+    let { url } = req.body;
 
     if (!url) {
         return res.status(400).json({
@@ -11,6 +19,8 @@ const scanUrl = async (req, res) => {
             success: false
         });
     }
+
+    url = normalizeUrl(url);
 
     try {
         const results = await scanPage(url);
@@ -30,7 +40,7 @@ const scanUrl = async (req, res) => {
                 prioritizedViolations: extractedData.prioritizedViolations,
                 violationsByType: extractedData.violationsByType
             },
-            
+
             //Future plan
             // Optionally include full results (commented out to reduce response size)
             // fullResults: results

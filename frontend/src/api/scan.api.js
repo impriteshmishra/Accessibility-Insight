@@ -7,7 +7,7 @@ export const scanUrl = async (url) => {
     "/api/v1/url/scan",
     { url: url }
   );
-  console.log("api response", response.data);
+  // console.log("api response", response.data);
   
 
   return response.data;
