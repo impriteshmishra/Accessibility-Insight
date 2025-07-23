@@ -4,11 +4,11 @@
   "main": "server.js",
   "type": "module",
   "scripts": {
-    "dev": "nodemon backend/server.js",
-    "build": "npm install && npm install --prefix frontend && npm run build --prefix frontend",
-    "start": "nodemon backend/server.js",
-    "postinstall": "npx puppeteer browsers install chrome"
-  },
+  "dev": "nodemon backend/server.js",
+  "build": "npm install && npm install --prefix frontend && npm run build --prefix frontend && npx puppeteer browsers install chrome",
+  "start": "nodemon backend/server.js"
+}
+,
   "keywords": [],
   "author": "",
   "license": "ISC",
