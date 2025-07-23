@@ -5,9 +5,9 @@
   "type": "module",
   "scripts": {
     "dev": "nodemon backend/server.js",
-    "build": "npm install && npx puppeteer browsers install chrome && npm install --prefix frontend && npm run build --prefix frontend",
+    "build": "npm install && npm install --prefix frontend && npm run build --prefix frontend",
     "start": "node backend/server.js",
-    "postinstall": "npx puppeteer browsers install chrome"
+    "postinstall": "node -e \"const puppeteer = require('puppeteer'); console.log('Puppeteer cache:', puppeteer.executablePath());\""
   },
   "keywords": [],
   "author": "",
