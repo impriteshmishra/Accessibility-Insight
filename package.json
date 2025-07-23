@@ -4,11 +4,10 @@
   "main": "server.js",
   "type": "module",
   "scripts": {
-  "dev": "nodemon backend/server.js",
-  "build": "npm install && npm install --prefix frontend && npm run build --prefix frontend && npx puppeteer browsers install chrome",
-  "start": "nodemon backend/server.js"
-}
-,
+    "dev": "nodemon backend/server.js",
+    "build": "npm install && npm install --prefix frontend && npm run build --prefix frontend",
+    "start": "node backend/server.js"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -20,6 +19,6 @@
     "dotenv": "^17.2.0",
     "express": "^4.21.2",
     "nodemon": "^3.1.10",
-    "puppeteer": "^24.14.0"
+    "puppeteer": "^24.15.0"
   }
 }
