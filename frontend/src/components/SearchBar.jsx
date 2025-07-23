@@ -70,7 +70,7 @@ const SearchBar = () => {
             <button
               onClick={handleScan}
               disabled={loading || !url.trim()}
-              className="w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white rounded-xl font-semibold text-base sm:text-lg flex items-center justify-center gap-2 transition-all transform hover:scale-105 shadow-lg"
+              className="w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white rounded-xl font-semibold text-base sm:text-lg flex items-center justify-center gap-2 transition-all transform hover:scale-105 shadow-lg cursor-pointer"
             >
               {loading ? (
                 <>

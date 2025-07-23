@@ -15,6 +15,7 @@ import {
 } from "lucide-react";
 import Footer from "../components/Footer";
 import NavBar from "../components/Navbar";
+import CountUp from '../helper/CountUp';
 
 const Why = () => {
   return (
@@ -45,7 +46,7 @@ const Why = () => {
             <div className="grid md:grid-cols-4 gap-8 text-center">
               <div>
                 <div className="text-4xl font-bold text-purple-600 mb-2">
-                  1.3B
+                <CountUp end={1.3}/> B
                 </div>
                 <div className="text-gray-600">
                   People worldwide live with disabilities
@@ -53,20 +54,20 @@ const Why = () => {
               </div>
               <div>
                 <div className="text-4xl font-bold text-pink-600 mb-2">
-                  $13T
+                  $<CountUp end={13}/>T
                 </div>
                 <div className="text-gray-600">
                   Annual disposable income of people with disabilities
                 </div>
               </div>
               <div>
-                <div className="text-4xl font-bold text-blue-600 mb-2">71%</div>
+                <div className="text-4xl font-bold text-blue-600 mb-2"> <CountUp end={71}/>%</div>
                 <div className="text-gray-600">
                   Of users with disabilities will leave an inaccessible website
                 </div>
               </div>
               <div>
-                <div className="text-4xl font-bold text-green-600 mb-2">2x</div>
+                <div className="text-4xl font-bold text-green-600 mb-2"> <CountUp end={2}/>x</div>
                 <div className="text-gray-600">
                   More likely to have a positive brand perception
                 </div>
@@ -472,7 +473,7 @@ const Why = () => {
             <div className="mt-8 space-x-4">
              
               <a href="https://dequeuniversity.com/rules/axe">
-              <button className="border-2 border-purple-600 text-purple-600 hover:bg-purple-600 hover:text-white font-semibold px-8 py-3 rounded-lg transition-colors">
+              <button className="cursor-pointer border-2 border-purple-600 text-purple-600 hover:bg-purple-600 hover:text-white font-semibold px-8 py-3 rounded-lg transition-colors">
                 Learn More
               </button>
               </a>

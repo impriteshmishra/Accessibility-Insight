@@ -44,7 +44,7 @@ const NavBar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16">
           {/* Logo and Brand */}
-          <div className="flex items-center">
+          <div className="flex items-center cursor-pointer" onClick={handleNavigate}>
             <div className="flex-shrink-0 flex items-center gap-2">
               <div className="p-1 bg-gradient-to-r from-indigo-600 to-purple-600 rounded-md shadow-lg">
                 <Eye className="w-8 h-8 text-white" />

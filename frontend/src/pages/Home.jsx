@@ -14,7 +14,7 @@ import {
 } from "lucide-react";
 import TrustedBy from "../components/TrustedBy";
 import Footer from "../components/Footer";
-import CountUp from "../components/CountUp";
+import CountUp from "../helper/CountUp";
 
 const Home = () => {
   const features = [

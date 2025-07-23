@@ -1,11 +1,16 @@
 import { Eye } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 const Footer = () => {
+  const navigate = useNavigate()
+    const handleNavigate = () => {
+    navigate("/");
+  };
   return (
     <footer className="bg-gray-900 text-gray-300 py-10 px-4 md:px-16">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
         {/* Logo & About */}
-        <div className="flex items-center">
+        <div className="flex items-center cursor-pointer" onClick={handleNavigate}>
           <div className="flex-shrink-0 flex items-center gap-2">
             <div className="p-1 bg-gradient-to-r from-indigo-600 to-purple-600 rounded-md shadow-lg">
               <Eye className="w-8 h-8 text-white" />

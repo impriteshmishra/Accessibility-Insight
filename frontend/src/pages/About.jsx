@@ -204,7 +204,7 @@ const About = () => {
             </p>
             <div className="space-x-4">
               <button
-                className="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-8 py-3 rounded-lg transition-colors"
+                className="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-8 py-3 rounded-lg transition-colors cursor-pointer"
                 onClick={handleScanNavigate}
               >
                 Start Testing Now
