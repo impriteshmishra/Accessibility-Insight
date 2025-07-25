@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { setScanData } from "@/redux/slice/scanSlice.js";
 import { AlertTriangle, Search } from "lucide-react";
+import { ImNotification } from "react-icons/im";
 
 const SearchBar = () => {
   const [url, setUrl] = useState("");
@@ -85,6 +86,14 @@ const SearchBar = () => {
               )}
             </button>
           </div>
+          {loading && (
+            <p className="flex items-center justify-center gap-2 text-lg text-gray-600 mt-2">
+              <span className="text-yellow-600 mb-1">
+                <ImNotification />
+              </span>{" "}
+              Scanning duration varies based on your website’s structure. Thank you for your patience!
+            </p>
+          )}
         </div>
       </div>
       {error && (

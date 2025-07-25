@@ -37,7 +37,7 @@ const NavBar = () => {
 
   return (
     <nav
-      className="bg-white shadow-lg border-b border-gray-200"
+      className="bg-white shadow-lg border-b border-gray-200 sticky top-0 z-50"
       role="navigation"
       aria-label="Main navigation"
     >
