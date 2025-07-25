@@ -6,7 +6,7 @@ import Footer from "../components/Footer";
 
 function Insights() {
   const results = useSelector((state) => state.scan.data);
-  console.log("result from insight",results);
+  // console.log("result from insight",results);
   
   return (
     <>
