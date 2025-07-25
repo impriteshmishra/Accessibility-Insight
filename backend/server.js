@@ -5,6 +5,7 @@ import cors from 'cors';
 import path from "path";
 
 dotenv.config({});
+
 const app = express();
 
 const __dirname = path.resolve(); //directories path 
@@ -25,6 +26,7 @@ app.use(express.urlencoded({ extended: true }));
 
 //Our api call here
 app.use("/api/v1/url", scanRoute)
+
 
 //deploying setup (backend automatically surf the frontend)
 app.use(express.static(path.join(__dirname, "frontend", "dist")));
