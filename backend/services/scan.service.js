@@ -14,7 +14,7 @@ export const scanPage = async (url) => {
     browser = result.browser;
     page = result.page;
 
-    await page.goto(url, { waitUntil: "networkidle2", timeout: 10000 });
+    await page.goto(url, { waitUntil: "domcontentloaded", timeout: 60000 });
 
     // ✅ Inject axe-core from local file
     await page.evaluate(axe.source); // inject axe-core source code
