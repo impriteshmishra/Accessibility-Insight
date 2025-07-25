@@ -2,7 +2,7 @@ import puppeteer from "puppeteer";
 
 export const launchBrowser = async () => {
   const browser = await puppeteer.launch({
-    headless: 'new', // Use 'new' instead of true for better compatibility
+    headless: 'new',
     args: [
       '--no-sandbox',
       '--disable-setuid-sandbox',
@@ -17,16 +17,10 @@ export const launchBrowser = async () => {
       '--disable-extensions',
       '--disable-default-apps'
     ]
-    // Remove executablePath - let Puppeteer handle it automatically
-    // executablePath: process.env.NODE_ENV === 'production'
-    //   ? '/opt/render/.cache/puppeteer/chrome/linux-*/chrome-linux64/chrome'
-    //   : undefined
-    // timeout: 30000
+    // Remove any executablePath - let Puppeteer use its bundled Chromium
   });
   
   const page = await browser.newPage();
-  
-  // Set a reasonable viewport
   await page.setViewport({ width: 1280, height: 720 });
   
   return { browser, page };
